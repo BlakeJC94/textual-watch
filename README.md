@@ -12,7 +12,7 @@ discussion.
 ## Installation
 Clone this repo and install it locally with `pip`:
 ```bash
-$ git clone https://github.com/BlakeJC94/textual_watch
+$ git clone https://github.com/BlakeJC94/textual-watch
 $ cd textual_watch
 $ pip install .
 ```

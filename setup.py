@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="textual_watch",
-    version="0.0.0",
+    version="0.0.1",
     description="Widget for Textual to watch a shell command",
     url="https://github.com/BlakeJC94/textual-watch",
     author="BlakeJC94",
