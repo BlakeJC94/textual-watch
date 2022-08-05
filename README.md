@@ -18,4 +18,33 @@ $ pip install .
 ```
 
 ## Quickstart
-TODO
+
+To write a simple app to monitor disk usage, we can write a simple disk space monitor with the
+following in a simple python script:
+
+```python
+# spaced.py
+from textual.app import App
+from textual.widgets import Placeholder
+
+from textual_watch import WatchShell
+
+
+class Demo(App):
+    async def on_mount(self) -> None:
+        widget = WatchShell(
+            "df -h",
+            interval=3.0,
+            title="current disk space",
+        )
+        await self.view.dock(widget, edge="left", size=100)
+
+    async def on_load(self, event):
+        await self.bind("q", "quit")
+
+
+Demo.run()
+```
+
+Run the script `$ python3 spaced.py` to see the output. Press `q` to close the TUI (since the
+command is executed asynchronously on another thread, there's no delay in registering key presses).
