@@ -1,5 +1,4 @@
 # Textual Watch
----
 Widget for Textual Framework that emulates the `watch` shell command
 
 This is an offshoot from a side-project where I needed to build a quick TUI using the
